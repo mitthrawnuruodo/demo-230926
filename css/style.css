@@ -186,13 +186,27 @@ figure.polaroid > figcaption {
 }
 
 div.test-1 figure.polaroid {
-  width: 33.33%;
-  float: left;
+   /* margin-right: 10px;
+   width: calc((100%/3) - 10px * 2/3);*/
+   width: 33.33%;
+   float: left;
 }
-
+/*
+div.test-1 figure.polaroid:last-child {
+    margin-right: 0px;   
+}
+*/
 div.test-2 {
   display: flex;
 }
+/*
+div.test-2 figure.polaroid {
+    margin-right: 10px;
+}
+div.test-2 figure.polaroid:last-child {
+    margin-right: 0px;
+}
+*/
 
 /**
  * **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
