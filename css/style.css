@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto&display=swap');
 
-* { margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     width: 95%;
@@ -162,4 +162,38 @@ button {
        between the labels and their text fields */
     margin-left: .3em;
 }
-  
+
+/**  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+ * Style for the cards on the Product page
+ */
+
+div[class^=test] { 
+    clear: both; 
+    max-width: 960px;
+}
+
+figure.polaroid {
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+}
+figure.polaroid > img { 
+  max-width: 100%; padding: 20px; 
+} 
+figure.polaroid > figcaption {
+  text-align: center; 
+  padding: 22px 20px 42px 20px;
+}
+
+div.test-1 figure.polaroid {
+  width: 33.33%;
+  float: left;
+}
+
+div.test-2 {
+  display: flex;
+}
+
+/**
+ * **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+ */
