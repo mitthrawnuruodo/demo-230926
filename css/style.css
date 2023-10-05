@@ -1,19 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto&display=swap');
 
+* { margin: 0; padding: 0; }
+
 body {
+    width: 95%;
+    margin: 10px auto 0;
     color: #fafafa;
     background-color: #255a5e;
 }
-
+/*
 nav ul li a {
     color: #fafafa;
+}
+*/
+nav ul { 
+    border: 1px solid green; /**/
+    list-style-type: none; /**/
+    display: inline-block; /*block or inline-block*/
+    padding-left: 0;/**/
+}
+
+nav li { 
+   /* border: 1px solid red; /**/
+    float: left; /**/
+    margin-right: 10px; /**/
+    background-color: #000; /**/
+}
+
+nav li a { 
+    text-decoration: none; /**/
+    /*width: 100px; /**/
+    display: inline-block; /**/
+    color: #fff; /**/
+    padding: 2px 15px; /**/
+    border: 1px solid black; /**/
+    text-align: center; /**/
+}
+
+nav li:last-child {
+    margin-right: 0; /**/
+}
+
+/* Add a color to the active/current link */
+nav li a.active {
+    background-color: #4CAF50;
+    color: black;
+    border-color: #4CAF50;
+}
+
+nav li a:hover { 
+    background-color: #4CAF50; /**/
+    color: #000; /**/
+}
+
+nav li.special {
+    float: left; 
+    /* 
+     * float: right; works when ul is a block 
+     * 
+    */
 }
 
 h1, h2, h3 {
     font-family: 'Inconsolata', monospace;
+    margin-bottom: 6px;
+    clear: both;
 }
+
 p {
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 3px;
 }
 
 h1#contact {
