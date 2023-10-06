@@ -75,6 +75,9 @@ h1#contact {
     text-align: center;
 }
 
+body#about h1 { color: red; }
+body#about p { color: blue; }
+
 /**  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
  * Style for the contact form on the Contact page
  */
@@ -112,7 +115,8 @@ form#contactform label::after {
     content: ": ";
 }
 
-form#contactform input, form#contactform textarea {
+form#contactform input, 
+form#contactform textarea {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
     font: 1em sans-serif;
@@ -136,7 +140,8 @@ input {
 }
 /**/
 
-form#contactform input:focus, form#contactform textarea:focus {
+form#contactform input:focus, 
+form#contactform textarea:focus {
     /* Additional highlight for focused elements */
     border-color: lightblue;
     color: black;
@@ -184,39 +189,48 @@ figure.polaroid > img {
 } 
 figure.polaroid > figcaption {
   text-align: center; 
+  /*font-weight: bold;/**/
   padding: 22px 20px 42px 20px;
 }
 
+/* First row, positioned with float*/
 div.test-1 figure.polaroid {
-   /*margin-right: 10px;
-   width: calc((100%/3) - 10px * 2/3);/**/
-   width: 33.33%;/**/
+   margin-right: 20px;
+   width: calc((100%/3) - 20px * 2/3);/**/
+   /*width: 33.33%;/**/
    float: left;
 }
-/*
+
 div.test-1 figure.polaroid:last-child {
     margin-right: 0px;   
 }
 /**/
+
+/* Second row, positoned with flexbox */
 div.test-2 {
   display: flex;
 }
-/*
+
 div.test-2 figure.polaroid {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 div.test-2 figure.polaroid:last-child {
     margin-right: 0px;
 }
 /**/
 
-
 @media only screen and (max-width: 560px) {
     div.test-1 figure.polaroid {
-        width: 100%
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
     }
     div.test-2 {
         flex-direction: column;
+    }
+    div.test-2 figure.polaroid {
+        margin-right: 0px;
+        margin-bottom: 20px;
     }
 }
 /**/
