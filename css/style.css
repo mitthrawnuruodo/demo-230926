@@ -188,16 +188,16 @@ figure.polaroid > figcaption {
 }
 
 div.test-1 figure.polaroid {
-   /* margin-right: 10px;
-   width: calc((100%/3) - 10px * 2/3);*/
-   width: 33.33%;
+   /*margin-right: 10px;
+   width: calc((100%/3) - 10px * 2/3);/**/
+   width: 33.33%;/**/
    float: left;
 }
 /*
 div.test-1 figure.polaroid:last-child {
     margin-right: 0px;   
 }
-*/
+/**/
 div.test-2 {
   display: flex;
 }
@@ -208,7 +208,18 @@ div.test-2 figure.polaroid {
 div.test-2 figure.polaroid:last-child {
     margin-right: 0px;
 }
-*/
+/**/
+
+
+@media only screen and (max-width: 560px) {
+    div.test-1 figure.polaroid {
+        width: 100%
+    }
+    div.test-2 {
+        flex-direction: column;
+    }
+}
+/**/
 
 /**
  * **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
