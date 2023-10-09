@@ -16,7 +16,7 @@ nav ul li a {
 nav ul { 
     /*border: 1px solid green; /**/
     list-style-type: none; /**/
-    display: inline-block; /*block or inline-block*/
+    display: block; /*block or inline-block*/
     padding-left: 0;/**/
     /* width: 500px; /**/
 }
@@ -55,7 +55,7 @@ nav li a:hover {
 }
 
 nav li.special {
-    float: left; 
+    float: right; 
     /* float: right; works when ul is a block or inline-block (with width) */
 }
 
